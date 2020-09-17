@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.houlin.databinding">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".binding_class.CustomClassActivity"></activity>
+        <activity android:name=".binding_class.AdvanceBindingActivity" />
+        <activity android:name=".binding_class.ViewStubActivity" />
+        <activity android:name=".binding_class.BindingClassActivity" />
+        <activity android:name=".observable_data.ObservableActivity" />
+        <activity android:name=".layout_bind_expression.ImportActivity" />
+        <activity android:name=".layout_bind_expression.EventHandleActivity" />
+        <activity android:name=".layout_bind_expression.ExpressionActivity" />
+        <activity android:name=".two_way_binding.ConverterActivity" />
+        <activity android:name=".two_way_binding.CustomAttributeActivity" />
+        <activity android:name=".two_way_binding.TwoWayActivity" />
+        <activity android:name=".layout_bind_to_architecture.LiveDataActivity" />
+        <activity android:name=".binding_adapters.ConvertActivity" />
+        <activity android:name=".binding_adapters.BindingAdapterActivity" />
+        <activity android:name=".binding_adapters.BindingMethodActivity" />
+        <activity android:name=".layout_bind_expression.BindDataActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

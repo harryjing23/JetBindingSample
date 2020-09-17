@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="myHandler"
+            type="com.houlin.databinding.layout_bind_expression.EventHandleActivity.MyHandler" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:context=".layout_bind_expression.EventHandleActivity">
+
+        <!--方法引用：格式为"变量::方法名"-->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{myHandler::method}"
+            android:text="方法引用" />
+
+        <!--监听器绑定：布局表达式中使用lambda表达式调用方法-->
+        <!--可以忽略监听器方法的所有参数，也可以定义所有参数-->
+        <!--忽略监听器的所有参数-->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->myHandler.listener()}"
+            android:text="监听器绑定" />
+
+        <!--可以使用void来表示"不调用方法"-->
+        <!--定义监听器方法的所有参数-->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{(v) -> v.getVisibility()==View.VISIBLE ? myHandler.doSomething() : void}"
+            android:text="void" />
+
+    </LinearLayout>
+</layout>

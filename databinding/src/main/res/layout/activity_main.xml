@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="布局和绑定表达式" />
+
+        <Button
+            android:id="@+id/bt_bind_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="数据对象、绑定数据"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/bt_expression"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="表达式语言"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/bt_event_handle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="事件处理"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/bt_import"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="导入、变量和包含"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="使用可观察的数据对象" />
+
+        <Button
+            android:id="@+id/bt_observable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="字段、集合、对象"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="生成的绑定类" />
+
+        <Button
+            android:id="@+id/bt_binding_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="创建绑定对象、带ID的视图、变量"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/bt_view_stub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="ViewStub"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/bt_advance_binding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="即时绑定、高级绑定、后台线程"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/bt_custom_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="自定义绑定类名称"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="绑定适配器" />
+
+        <Button
+            android:id="@+id/bt_binding_method"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="指定自定义方法名称"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/bt_binding_adapter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="提供自定义逻辑"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/bt_convert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="对象转换"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="将布局视图绑定到架构组件" />
+
+        <Button
+            android:id="@+id/bt_live_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="Live Data、ViewMode、Observable ViewModel"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="双向数据绑定" />
+
+        <Button
+            android:id="@+id/bt_two_way"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="双向绑定"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/bt_custom_Attribute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="自定义特性的双向绑定"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/bt_converter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="转换器"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+</ScrollView>

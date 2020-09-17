@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.houlin.databinding.layout_bind_to_architecture.MyViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:context=".layout_bind_to_architecture.LiveDataActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.username}" />
+
+        <Button
+            android:id="@+id/bt_append"
+            android:onClick="append"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="append" />
+
+    </LinearLayout>
+</layout>

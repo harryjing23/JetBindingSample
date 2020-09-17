@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.houlin.databinding.binding_adapters.User" />
+
+        <variable
+            name="attach"
+            type="androidx.databinding.adapters.ViewBindingAdapter.OnViewAttachedToWindow" />
+
+        <variable
+            name="detach"
+            type="androidx.databinding.adapters.ViewBindingAdapter.OnViewDetachedFromWindow" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".binding_adapters.BindingAdapterActivity">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:paddingLeft="@{user.age}"
+            app:OnViewAttachedToWindow="@{(view)->attach.onViewAttachedToWindow(view)}"
+            app:OnViewDetachedFromWindow="@{(view)->detach.onViewDetachedFromWindow(view)}"
+            app:error="@{@drawable/ic_launcher_background}"
+            app:imageUrl="@{`test`}" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="addLeft"
+            android:text="add left padding" />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="androidx.databinding.ObservableArrayMap" />
+
+        <variable
+            name="user"
+            type="ObservableArrayMap&lt;String, Object>" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".binding_adapters.ConvertActivity">
+
+        <!--Object自动转换为CharSequence类型-->
+        <TextView
+            android:id="@+id/tv_last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user[`lastName`]}" />
+
+        <!--用表达式设置background，调用setBackground(Drawable)-->
+        <!--而@color/colorPrimary是int，就需要自定义转换-->
+        <TextView
+            android:id="@+id/tv_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@{@color/colorPrimary}"
+            android:text="@{user[`firstName`]}" />
+
+    </LinearLayout>
+</layout>

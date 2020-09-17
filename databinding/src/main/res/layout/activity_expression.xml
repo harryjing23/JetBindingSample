@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.util.SparseArray" />
+
+        <import type="java.util.Map" />
+
+        <!--自动导入基础类java.lang.*，eg. String-->
+        <!--表达式中"<"需要用转义字符&lt;代替-->
+        <variable
+            name="sparse"
+            type="SparseArray&lt;String>" />
+
+        <variable
+            name="map"
+            type="Map&lt;String, String>" />
+
+        <variable
+            name="user"
+            type="com.houlin.databinding.layout_bind_expression.User" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:context=".layout_bind_expression.ExpressionActivity">
+
+        <!--1.属性引用（引用对象的属性）-->
+        <TextView
+            android:id="@+id/tv_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.firstName}"
+            tools:text="first name" />
+        <!--表达式可防止数据的空指针异常-->
+
+        <!--2.视图引用（引用具有id的控件）-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{tvFirst.text}" />
+
+        <!--可使用[]访问常见集合，例如数组、列表、稀疏列表和映射-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{sparse[0]}" />
+
+        <!--表达式中要用反引号`括住字符串字面量-->
+        <!--或用单引号'括住表达式，再用双引用"括住字符串字面量-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{map[`lastName`]}" />
+        <!--Map可以用map.key代替map[key]-->
+
+        <!--3.资源引用-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@{@drawable/ic_launcher_background}" />
+        <!--与常规引用不同，表达式引用只能传该特性的数据类型-->
+        <!--eg.ImageView的src特性的数据类型为Drawable-->
+        <!--也可以引用带参数的资源，eg.格式字符串、复数字符串-->
+
+        <!--有些资源与常规引用的格式不同，eg.String[], int[]-->
+
+    </LinearLayout>
+</layout>
