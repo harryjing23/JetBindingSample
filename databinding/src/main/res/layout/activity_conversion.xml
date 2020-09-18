@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".binding_adapters.ConvertActivity">
+        tools:context=".binding_adapters.ConversionActivity">
 
         <!--Object自动转换为CharSequence类型-->
         <TextView
@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:text="@{user[`lastName`]}" />
 
-        <!--用表达式设置background，调用setBackground(Drawable)-->
+        <!--用表达式设置background，会调用setBackground(Drawable)-->
         <!--而@color/colorPrimary是int，就需要自定义转换-->
         <TextView
             android:id="@+id/tv_first"

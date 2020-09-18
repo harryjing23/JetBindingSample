@@ -23,7 +23,7 @@
         <activity android:name=".two_way_binding.CustomAttributeActivity" />
         <activity android:name=".two_way_binding.TwoWayActivity" />
         <activity android:name=".layout_bind_to_architecture.LiveDataActivity" />
-        <activity android:name=".binding_adapters.ConvertActivity" />
+        <activity android:name=".binding_adapters.ConversionActivity" />
         <activity android:name=".binding_adapters.BindingAdapterActivity" />
         <activity android:name=".binding_adapters.BindingMethodActivity" />
         <activity android:name=".layout_bind_expression.BindDataActivity" />

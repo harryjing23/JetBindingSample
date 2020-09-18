@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.houlin.databinding.binding_adapters.BindingAdapterActivity;
 import com.houlin.databinding.binding_adapters.BindingMethodActivity;
-import com.houlin.databinding.binding_adapters.ConvertActivity;
+import com.houlin.databinding.binding_adapters.ConversionActivity;
 import com.houlin.databinding.binding_class.AdvanceBindingActivity;
 import com.houlin.databinding.binding_class.BindingClassActivity;
 import com.houlin.databinding.binding_class.CustomClassActivity;
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                 gotoActivity(BindingAdapterActivity.class);
                 break;
             case R.id.bt_convert:
-                gotoActivity(ConvertActivity.class);
+                gotoActivity(ConversionActivity.class);
                 break;
             // ---------将布局视图绑定到架构组件
             case R.id.bt_live_data:

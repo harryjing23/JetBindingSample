@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * 导入、变量和包含：
- * 导入：在layout标签中用import标签导入布局表达式中使用的类。类名冲突时，可以使用alias属性设置别名
+ * 导入：在layout标签中用import标签导入绑定表达式中使用的类。类名冲突时，可以使用alias属性设置别名
  * <p>
  * 变量：在layout标签中用variable标签声明变量，再用绑定类给变量赋值
  * 绑定类对每个变量都生成getter和setter，在调用setter赋值之前，变量都为默认值

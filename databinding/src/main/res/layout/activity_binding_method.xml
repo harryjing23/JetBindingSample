@@ -13,11 +13,19 @@
         android:orientation="vertical"
         tools:context=".binding_adapters.BindingMethodActivity">
 
+        <!--1.自动选择方法-->
         <com.houlin.databinding.binding_adapters.MyTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:content="@{`MyTextView`}" />
 
+        <!--也可以调用原生View里面的setter-->
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:scrimColor="@{@color/colorAccent}" />
+
+        <!--2.指定自定义方法-->
         <com.houlin.databinding.binding_adapters.ToastTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

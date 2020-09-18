@@ -42,7 +42,7 @@ public class BindingAdapterActivity extends AppCompatActivity {
     /**
      * 提供自定义逻辑：
      * 用@BindingAdapter可以指定多个attribute。requireAll默认为true，代表所有特性都设置了，才会调用方法
-     * 注意：要public static方法，第一个参数是特性所属的视图
+     * 注意：必须要public static方法，第一个参数必须是特性所属的视图
      */
     @BindingAdapter(value = {"imageUrl", "error"}, requireAll = false)
     public static void loadImage(ImageView imageView, String url, Drawable error) {
@@ -58,8 +58,8 @@ public class BindingAdapterActivity extends AppCompatActivity {
     }
 
     /**
-     * 可以在方法中同时接收旧值和新值：在参数中先声明旧值，再声明新值
-     * BindingAdapter中还可以定义"android:特性"，与系统特性冲突时会替换系统的
+     * 还可以在方法中同时接收旧值和新值：在参数中先声明旧值，再声明新值
+     * BindingAdapter中还可以定义"android:特性"，与系统特性冲突时会替换系统的方法
      */
     @BindingAdapter("android:paddingLeft")
     public static void setPaddingLeft(View view, int oldLeft, int newLeft) {
@@ -73,7 +73,7 @@ public class BindingAdapterActivity extends AppCompatActivity {
     }
 
     /**
-     * 事件处理脚本只能与仅有一种抽象方法的接口或抽象类一起使用
+     * ###事件处理脚本只能与仅有一种抽象方法的接口或抽象类一起使用
      * 当监听器有多个方法时，必须将它拆分为多个监听器
      */
     @BindingAdapter(value = {"OnViewAttachedToWindow", "OnViewDetachedFromWindow"}, requireAll = false)
@@ -84,7 +84,7 @@ public class BindingAdapterActivity extends AppCompatActivity {
             newListener = null;
         } else {
             // 本来就是将View.OnAttachStateChangeListener拆成了两个attach和detach接口，
-            // 再将这两个拼成View.OnAttachStateChangeListener
+            // 再在方法中将这两个拼成View.OnAttachStateChangeListener
             newListener = new View.OnAttachStateChangeListener() {
                 @Override
                 public void onViewAttachedToWindow(View v) {
@@ -117,6 +117,7 @@ public class BindingAdapterActivity extends AppCompatActivity {
 
     }
 
+    // View.OnAttachStateChangeListener有两个方法，需要拆分成只有一个方法的两个接口
     private ViewBindingAdapter.OnViewAttachedToWindow mAttached = new ViewBindingAdapter.OnViewAttachedToWindow() {
         @Override
         public void onViewAttachedToWindow(View v) {

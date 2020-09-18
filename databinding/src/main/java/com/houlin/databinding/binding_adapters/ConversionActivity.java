@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.BindingConversion;
 import androidx.databinding.ObservableArrayMap;
 
-import com.houlin.databinding.databinding.ActivityConvertBinding;
+import com.houlin.databinding.databinding.ActivityConversionBinding;
 
 /**
  * 自动转换：
@@ -18,15 +18,15 @@ import com.houlin.databinding.databinding.ActivityConvertBinding;
  * 当自动转换无法转换为目标数据时，还可以用@BindingConversion实现自定义转换
  * BindingConversion方法定义在任何类中都可以，但访问权限必须是public static
  */
-public class ConvertActivity extends AppCompatActivity {
-    private static final String TAG = "ConvertActivity";
-    ActivityConvertBinding mBinding;
+public class ConversionActivity extends AppCompatActivity {
+    private static final String TAG = "ConversionActivity";
+    ActivityConversionBinding mBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_convert);
-        mBinding = ActivityConvertBinding.inflate(getLayoutInflater());
+//        setContentView(R.layout.activity_conversion);
+        mBinding = ActivityConversionBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
 
         ObservableArrayMap<String, Object> user = new ObservableArrayMap<>();

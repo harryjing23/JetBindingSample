@@ -22,7 +22,7 @@ import androidx.annotation.Nullable;
 // BindingMethod可以定义在任意类的外面，详见Methods类
 //@BindingMethods({
 //        @BindingMethod(type = ToastTextView.class, attribute = "toast", method = "showToast"),
-//        @BindingMethod(type = TextView.class, attribute = "content", method = "showContent")
+//        @BindingMethod(type = ToastTextView.class, attribute = "content", method = "showContent")
 //})
 public class ToastTextView extends TextView {
     private static final String TAG = "ToastTextView";

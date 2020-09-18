@@ -8,10 +8,10 @@ import com.houlin.databinding.R;
 import com.houlin.databinding.databinding.ActivityExpressionBinding;
 
 /**
- * 布局表达式：@{}
+ * 绑定表达式：@{}
  * 表达式不支持：this, super, new, 泛型
  * Null合并运算符：a ?? b（若a为null则取b，否则取a）
- * 布局表达式可以防止数据的空指针异常，自动分配默认值
+ * 绑定表达式可以防止数据的空指针异常，自动分配默认值
  * 表达式求值时，可以获得线程安全
  * 表达式的用法见布局文件
  */
@@ -27,7 +27,7 @@ public class ExpressionActivity extends AppCompatActivity {
         mBinding = ActivityExpressionBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
 
-        // 布局表达式可以防止数据的空指针异常，自动分配默认值
+        // 绑定表达式可以防止数据的空指针异常，自动分配默认值
         mBinding.setUser(null);
     }
 
