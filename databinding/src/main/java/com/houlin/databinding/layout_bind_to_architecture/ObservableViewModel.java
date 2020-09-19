@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModel;
  * @date 2020/9/14
  */
 public class ObservableViewModel extends ViewModel implements Observable {
+    // 用于管理Observable回调的工具类
     private PropertyChangeRegistry callbacks = new PropertyChangeRegistry();
 
     /**
@@ -30,6 +31,8 @@ public class ObservableViewModel extends ViewModel implements Observable {
     public void removeOnPropertyChangedCallback(OnPropertyChangedCallback callback) {
         callbacks.remove(callback);
     }
+
+    // -----------------提供需要在可观察对象的setter中调用的两个方法（与BaseObservable类似）-----------------
 
     /**
      * Notifies observers that all properties of this instance have changed.

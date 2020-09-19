@@ -15,7 +15,7 @@
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        tools:context=".layout_bind_to_architecture.LiveDataActivity">
+        tools:context=".layout_bind_to_architecture.BindArchitectureActivity">
 
         <TextView
             android:layout_width="wrap_content"
@@ -24,9 +24,9 @@
 
         <Button
             android:id="@+id/bt_append"
-            android:onClick="append"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="append"
             android:text="append" />
 
     </LinearLayout>

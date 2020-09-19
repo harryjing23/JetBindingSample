@@ -16,7 +16,7 @@ import com.houlin.databinding.binding_class.ViewStubActivity;
 import com.houlin.databinding.layout_bind_expression.EventHandleActivity;
 import com.houlin.databinding.layout_bind_expression.ExpressionActivity;
 import com.houlin.databinding.layout_bind_expression.ImportActivity;
-import com.houlin.databinding.layout_bind_to_architecture.LiveDataActivity;
+import com.houlin.databinding.layout_bind_to_architecture.BindArchitectureActivity;
 import com.houlin.databinding.layout_bind_expression.BindDataActivity;
 import com.houlin.databinding.observable_data.ObservableActivity;
 import com.houlin.databinding.two_way_binding.ConverterActivity;
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             // ---------将布局视图绑定到架构组件
             case R.id.bt_live_data:
-                gotoActivity(LiveDataActivity.class);
+                gotoActivity(BindArchitectureActivity.class);
                 break;
             // ---------双向数据绑定
             case R.id.bt_two_way:
