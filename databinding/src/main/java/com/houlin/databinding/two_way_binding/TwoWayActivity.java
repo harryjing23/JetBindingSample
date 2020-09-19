@@ -10,9 +10,9 @@ import androidx.lifecycle.ViewModelProvider;
 import com.houlin.databinding.databinding.ActivityTwoWayBinding;
 
 /**
- * 双向绑定：
- * 单向绑定是数据驱动视图，但视图无法驱动数据，需要在视图上添加监听器才可以获取视图上的更新 eg.EditText, CheckBox
- * 常见特性可直接通过"@={...}"使用双向绑定，大多数原生控件已经实现了BindingAdapter(eg. TextViewBindingAdapter)
+ * 原生控件特性的双向绑定：
+ * 单向绑定是"数据驱动视图"，但视图无法驱动数据，需要在视图上添加监听器才可以获取视图上的更新事件 eg.EditText, CheckBox
+ * 大多数原生控件的常见双向特性可直接通过"@={...}"使用双向绑定
  */
 public class TwoWayActivity extends AppCompatActivity {
 

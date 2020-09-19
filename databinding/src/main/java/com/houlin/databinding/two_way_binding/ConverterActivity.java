@@ -10,6 +10,10 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.houlin.databinding.databinding.ActivityConverterBinding;
 
+/**
+ * 转换器：
+ * 见Converter类
+ */
 public class ConverterActivity extends AppCompatActivity {
 
     private ActivityConverterBinding mBinding;
